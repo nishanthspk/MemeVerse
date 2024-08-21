@@ -28,6 +28,10 @@ const Community = () => {
               />
             </div>
           </div>
+          <div className='pt-5'>
+        
+          <hr className=' border-t-2  border-cyan-800  ' />
+          </div>
 
         <div className='flex justify-between mx-10 pt-12'>
         
@@ -53,7 +57,7 @@ const Community = () => {
         </div>
         
 
-        <div className='backdrop-blur-md bg-white/10 rounded-lg p-4'>
+        <div className='backdrop-blur-sm bg-white/10 rounded-lg p-4 '>
           <div>
             <img src={Rect} alt="" />
 

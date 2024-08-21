@@ -13,6 +13,7 @@ const App = () => {
       <Navbar />  {/* Include Navbar here */}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/mintnft" element={<MintNft />} />
         <Route path="/community" element={<Community />} />
         <Route path="/contactus" element={<ContactUs />} />
