@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import  Logo  from "../assets/logo1.png";
+import CustomButton from './Button';
 
 const Navbar = () => {
   return (
@@ -19,7 +20,8 @@ const Navbar = () => {
         <Link to="/contactus">Contact Us</Link>
       </div>
       <div className='bg-white rounded-xl p-1 '>
-        <Link to="">ConnectWallet</Link>
+        {/* <Link to="">ConnectWallet</Link> */}
+        <CustomButton />
       </div>
     </nav>
     </div>

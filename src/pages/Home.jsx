@@ -19,7 +19,7 @@ const Home = () => {
       Own and trade your favorite memes as NFTs. Create, mint, and share with a <br />global community  of meme enthusiasts. Join the meme revolution now!
       </p>
       <div className='flex justify-center pt-8'>
-       <a className=' bg-white rounded-2xl p-1 pt-1 pb-1 '>Get Started</a>
+       <a className=' bg-white rounded-2xl p-2 '>Get Started</a>
       </div>
       </div>
 
@@ -70,7 +70,7 @@ const Home = () => {
         </div>
       </div>
       <div className='flex justify-center pt-24'>
-       <a className=' bg-white rounded-2xl p-1'>Get Started</a>
+       <a className=' bg-white rounded-2xl p-2'>Get Started</a>
       </div>
 
       </div>
