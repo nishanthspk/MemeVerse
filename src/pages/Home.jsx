@@ -1,6 +1,7 @@
 import React from 'react';
 import Illustration from '../assets/Illustration.png';
 import Illustration1 from '../assets/Illustration2.png';
+import Logo from "../assets/logo1.png";
 
 const Home = () => {
   return (
@@ -95,6 +96,14 @@ const Home = () => {
               Get Started
             </a>
           </div>
+        </div>
+        <div>
+        <div className='flex justify-center pt-10 space-x-2'>
+        <div className='h-8 w-6 '>
+        <img src={Logo}></img>
+        </div>
+        <a className='text-white font-extrabold '>OnchainMemes</a>
+      </div>
         </div>
       </div>
       

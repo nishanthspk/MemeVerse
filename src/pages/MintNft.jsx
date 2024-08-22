@@ -52,7 +52,7 @@ const MintNft = () => {
           <div className=' backdrop-blur-md bg-white/10 rounded-lg mt-10 p-3'>
               <textarea
                 type="text"
-                className='w-full rounded-xl bg-slate-500 p-2 min-h-40 mt-10  text-white '
+                className='w-full rounded-xl bg-slate-500 p-2 min-h-40 mt-2 text-white '
                 placeholder="Enter NFT Description"
               />
               </div>

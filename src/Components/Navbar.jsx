@@ -8,10 +8,10 @@ const Navbar = () => {
     <div className=' bg-black' >
     <nav className='flex justify-between mx-12 pt-4 '>
       <div className='flex space-x-2'>
-        <div className='h-8 w-6 '>
-        <img src={Logo}></img>
+        <div className='h-10 w-8 '>
+        <img src={Logo} className='backdrop-blur-md  bg-white rounded-2xl '></img>
         </div>
-        <a className='text-white'>OnchainMemes</a>
+        <a className='text-white font-extrabold'>OnchainMemes</a>
       </div>
       <div className='text-white space-x-14'>
       <Link to="/home">Home</Link>
