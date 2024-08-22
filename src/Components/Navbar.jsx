@@ -17,7 +17,7 @@ const Navbar = () => {
       <Link to="/home">Home</Link>
         <Link to="/mintnft">MintNft</Link>
         <Link to="/community">Community</Link>
-        <Link to="/contactus">Contact Us</Link>
+        {/* <Link to="/contactus">Contact Us</Link> */}
       </div>
       <div className='bg-white rounded-xl p-1 '>
         {/* <Link to="">ConnectWallet</Link> */}

@@ -18,7 +18,7 @@ const Community = () => {
             <div className='relative'>
               <input 
                 type="text" 
-                className='bg-black rounded-lg border-2 border-white pt-2 pl-4 pr-12' // Add padding to the right for the image
+                className='bg-black text-white rounded-lg border-2 border-white pt-2  pr-12' // Add padding to the right for the image
                 placeholder="" // Optional: Add a placeholder
               />
               <img 
