@@ -5,48 +5,50 @@ import Logo from "../assets/logo1.png";
 
 const Home = () => {
   return (
-    <div className='font-poppins'>
-      <div className='bg-gradient-to-b from-black via-black to-cyan-500 min-h-screen'>
-        <div className='pt-16 pb-4'>
-          <div className='flex justify-center'>
-            <p className='text-white flex justify-center text-2xl bg-black border-2 border-cyan-500 w-fit p-3 text-center rounded-xl font-semibold'>
+    <div className='font-poppins bg-black'>
+      <div className='bg-gradient-to-b from-black via-black to-cyan-500 h-full md:min-h-screen mx-4 rounded-b-xl'>
+        <div className='md:pt-52 lg:pt-10  lg:pb-4 pt-20 '>
+          <div className='flex justify-center '>
+            <div >
+            <p className='text-white flex justify-center sm:text-xl md:text-2xl bg-black border-2 border-cyan-500 w-fit p-3 text-center rounded-xl font-semibold'>
               Upload, Mint, and Connect 🚀
             </p>
+            </div>
           </div>
-          <p className='text-white flex justify-center pb-4 pt-5 text-5xl text-center font-bold leading-tight'>
+          <p className='text-white flex justify-center md:pb-4 md:pt-10 lg:pt-5 text-2xl md:text-5xl text-center font-bold leading-tight'>
             Your Memes, Your NFT: Join<br /> the Digital Art Revolution
           </p>
-          <p className='text-white flex justify-center text-3xl pt-5 text-center leading-relaxed'>
-            Own and trade your favorite memes as NFTs. Create, mint, and share with a<br /> global community of meme enthusiasts. Join the meme revolution now!
+          <p className='text-white flex justify-center sm:text-xl md:text-3xl md:pt-10 lg:pt-5 md:text-center lg:text-center leading-relaxed'>
+            Own and trade your favorite memes as NFTs. Create, mint, and share with a global community of meme enthusiasts. Join the meme revolution now!
           </p>
-          <div className='flex justify-center pt-8'>
-            <a className='bg-white rounded-2xl p-2 text-black hover:bg-cyan-500 transition-all text-lg font-medium'>
+          <div className='flex justify-center md:pt-20 lg:pt-8'>
+            <a className='bg-white rounded-2xl p-3 text-black hover:bg-cyan-500 transition-all text-lg font-medium'>
               Get Started
             </a>
           </div>
         </div>
 
-        <div className='flex justify-between h-72 mx-4'>
+        <div className='hidden md:flex justify-between  md:h-80 lg:h-72 md:mx-5 lg:mx-4 '>
           <img src={Illustration1} alt='Illustration 1' className='' />
           <img src={Illustration} alt='Illustration 2' className='' />
         </div>
       </div>
 
-      <div className='bg-black'>
-        <div className='text-white flex justify-between pt-6 pb-6 mx-40'>
-          <p className='text-2xl font-semibold leading-snug'>
+      <div className='bg-black p-10'>
+        <div className='text-white grid grid-cols-2 md:pt-4 lg:pt-6 md:pb-3 lg:pb-6 md:mx-5 space-x-10 items-center  '>
+          <p className='text-4xl font-semibold leading-snug '>
             Want to earn rewards while uploading your favorite memes?
           </p>
-          <p className='text-lg leading-relaxed'>
+          <p className='text-base leading-relaxed'>
             At Meme3, we empower you to create, mint, and trade meme NFTs. Our platform offers an intuitive meme creation tool, a secure NFT minting process, and a vibrant marketplace for buying and selling. Join our global community of meme enthusiasts and turn your favorite memes into valuable digital assets.
           </p>
         </div>
       </div>
 
       <div className='bg-gradient-to-t from-black via-black to-cyan-500 min-h-screen'>
-        <div className='text-white pt-6'>
-          <p className='flex justify-center text-xl font-semibold'>How Meme3 Works</p>
-          <p className='flex justify-center text-5xl pt-2 font-bold leading-tight'>Create, Mint, Trade, Enjoy</p>
+        <div className='text-white md:pt-40 lg:pt-6'>
+          <p className='flex justify-center md:text-3xl lg:text-xl uppercase font-medium'>How Meme3 Works</p>
+          <p className='flex justify-center text-5xl md:pt-4 lg:pt-2  leading-tight'>Create, Mint, Trade, Enjoy</p>
           <p className='flex justify-center pt-2 text-center mx-4 text-lg leading-relaxed'>
             Explore and discover how you can engage with memes, convert them into NFTs, and participate in the global marketplace to unlock rewards and opportunities.
           </p>
