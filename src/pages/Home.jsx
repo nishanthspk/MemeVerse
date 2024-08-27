@@ -2,6 +2,11 @@ import React from 'react';
 import Illustration from '../assets/Illustration.png';
 import Illustration1 from '../assets/Illustration2.png';
 import Logo from "../assets/logo1.png";
+import Facebook from "../assets/Facebook.png";
+import Instagram from "../assets/Instagram.png";
+import LinkedIn from "../assets/LinkedIn.png";
+import Twitter from "../assets/TwitterX.png";
+import Telegram from "../assets/Telegram App.png";
 
 const Home = () => {
   return (
@@ -10,19 +15,19 @@ const Home = () => {
         <div className='md:pt-52 lg:pt-10  lg:pb-4 pt-20 '>
           <div className='flex justify-center '>
             <div >
-            <p className='text-white flex justify-center sm:text-xl md:text-2xl bg-black border-2 border-cyan-500 w-fit p-3 text-center rounded-xl font-semibold'>
+            <p className='text-white lg:text-xl flex justify-center sm:text-xl md:text-2xl bg-black border-2 border-cyan-500  w-fit p-2   text-center rounded-xl  '>
               Upload, Mint, and Connect 🚀
             </p>
             </div>
           </div>
-          <p className='text-white flex justify-center md:pb-4 md:pt-10 lg:pt-5 text-2xl md:text-5xl text-center font-bold leading-tight'>
+          <p className='text-white flex justify-center md:pb-4 md:pt-10 pt-10 text-2xl md:text-5xl text-center font-bold leading-tight'>
             Your Memes, Your NFT: Join<br /> the Digital Art Revolution
           </p>
-          <p className='text-white flex justify-center sm:text-xl md:text-3xl md:pt-10 lg:pt-5 md:text-center lg:text-center leading-relaxed'>
+          <p className='text-white flex justify-center text-sm sm:text-xl md:text-3xl md:pt-10 pt-10 lg:pt-5 lg:mx-16 md:text-center lg:text-center text-center leading-relaxed'>
             Own and trade your favorite memes as NFTs. Create, mint, and share with a global community of meme enthusiasts. Join the meme revolution now!
           </p>
-          <div className='flex justify-center md:pt-20 lg:pt-8'>
-            <a className='bg-white rounded-2xl p-3 text-black hover:bg-cyan-500 transition-all text-lg font-medium'>
+          <div className='flex justify-center md:pt-20 lg:pt-8 pt-10 pb-10'>
+            <a className='bg-white rounded-2xl p-3 text-black hover:bg-cyan-500 transition-all  text-lg font-medium'>
               Get Started
             </a>
           </div>
@@ -45,7 +50,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='bg-gradient-to-t from-black via-black to-cyan-500 min-h-screen'>
+      <div className='bg-gradient-to-t from-black via-black to-cyan-500 min-h-screen rounded-2xl mx-4'>
         <div className='text-white md:pt-40 lg:pt-6'>
           <p className='flex justify-center md:text-3xl lg:text-xl uppercase font-medium'>How Meme3 Works</p>
           <p className='flex justify-center text-5xl md:pt-4 lg:pt-2  leading-tight'>Create, Mint, Trade, Enjoy</p>
@@ -85,7 +90,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='bg-gradient-to-b from-black via-black to-cyan-500 min-h-screen'>
+      <div className='bg-gradient-to-b from-black via-black to-cyan-500 min-h-screen rounded-2xl mx-4 '>
         <div className='text-white pt-32'>
           <p className='flex justify-center text-5xl text-center font-bold leading-tight'>
             Join Meme3 Today and Shape<br /> the Future of Memes!
@@ -101,14 +106,20 @@ const Home = () => {
         </div>
         <div>
         <div className='flex justify-center pt-10 space-x-2'>
-        <div className='h-8 w-6 '>
+        <div className='h-10 w-8 '>
         <img src={Logo}></img>
         </div>
-        <a className='text-white font-extrabold '>OnchainMemes</a>
+        <a className='text-white text-2xl  '>OnchainMemes</a>
       </div>
         </div>
       </div>
-      
+      <div className='flex pt-5 justify-center'>
+            <img className='pr-2 h-6 cursor-pointer hover:opacity-75' src={Facebook} alt="Facebook" />
+            <img className='pr-2 h-6 cursor-pointer hover:opacity-75' src={Instagram} alt="Instagram" />
+            <img className='pr-2 h-6 cursor-pointer hover:opacity-75' src={Telegram} alt="Telegram" />
+            <img className='pr-2 h-6 cursor-pointer hover:opacity-75' src={Twitter} alt="Twitter" />
+            <img className='pr-2 h-6 cursor-pointer hover:opacity-75' src={LinkedIn} alt="LinkedIn" />
+      </div>
 
 
     </div>

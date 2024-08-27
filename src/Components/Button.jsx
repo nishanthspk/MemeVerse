@@ -66,7 +66,7 @@ const CustomButton = () => {
             {(() => {
               if (!connected) {
                 return (
-                  <button onClick={openConnectModal} type="button">
+                  <button className='p-1' onClick={openConnectModal} type="button">
                     Connect Wallet
                   </button>
                 );
