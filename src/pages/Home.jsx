@@ -110,9 +110,9 @@ const Home = () => {
         <img src={Logo}></img>
         </div>
         <a className='text-white text-2xl  '>OnchainMemes</a>
+        
       </div>
-        </div>
-      </div>
+      <div>
       <div className='flex pt-5 justify-center'>
             <img className='pr-2 h-6 cursor-pointer hover:opacity-75' src={Facebook} alt="Facebook" />
             <img className='pr-2 h-6 cursor-pointer hover:opacity-75' src={Instagram} alt="Instagram" />
@@ -120,6 +120,10 @@ const Home = () => {
             <img className='pr-2 h-6 cursor-pointer hover:opacity-75' src={Twitter} alt="Twitter" />
             <img className='pr-2 h-6 cursor-pointer hover:opacity-75' src={LinkedIn} alt="LinkedIn" />
       </div>
+      </div>
+        </div>
+      </div>
+     
 
 
     </div>
