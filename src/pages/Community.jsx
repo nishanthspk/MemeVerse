@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Subtract from "../assets/Subtract.png";
-import Rect from "../assets/Rectangle .png";
+import Rect from "../assets/Rectangle .png"; // Placeholder image
 
 // Framer Motion Variants
 const slideInTop = {
@@ -32,13 +31,15 @@ const Community = () => {
 
   useEffect(() => {
     // Retrieve the data for all four communities from local storage
-    const communityData = ['Community1', 'Community2', 'Community3', 'Community4'].map((community) => ({
-      id: community,
-      name: localStorage.getItem(`${community}_nftName`) || '',
-      description: localStorage.getItem(`${community}_nftDescription`) || '',
-      communityName: localStorage.getItem(`${community}_communityName`) || '',
-      image: localStorage.getItem(`${community}_uploadedImage`) || Rect,
-    }));
+    const communityData = ['Community1', 'Community2', 'Community3', 'Community4'].map((community) => {
+      const communityInfo = JSON.parse(localStorage.getItem(`${community}_data`)) || {};
+      return {
+        id: community,
+        name: communityInfo.nftName || '',
+        description: communityInfo.nftDescription || '',
+        image: communityInfo.selectedImage || Rect, // Use Rect as the default image
+      };
+    });
     setCommunities(communityData);
   }, []);
 

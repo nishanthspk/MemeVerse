@@ -28,13 +28,15 @@ const MintNft = () => {
   const [nftDescription, setNftDescription] = useState('');
   const [nftDescription1, setNftDescription1] = useState('');
   const [selectedImage, setSelectedImage] = useState(null);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
-  // Load stored values when the selected community changes
+  // Load temporary values when the selected community changes
   useEffect(() => {
-    setNftName(localStorage.getItem(`${selectedCommunity}_nftName`) || '');
-    setNftDescription(localStorage.getItem(`${selectedCommunity}_nftDescription`) || '');
-    setNftDescription1(localStorage.getItem(`${selectedCommunity}_nftDescription1`) || '');
-    setSelectedImage(localStorage.getItem(`${selectedCommunity}_uploadedImage`) || null);
+    setNftName(localStorage.getItem(`${selectedCommunity}_temp_nftName`) || '');
+    setNftDescription(localStorage.getItem(`${selectedCommunity}_temp_nftDescription`) || '');
+    setNftDescription1(localStorage.getItem(`${selectedCommunity}_temp_nftDescription1`) || '');
+    setSelectedImage(localStorage.getItem(`${selectedCommunity}_temp_uploadedImage`) || null);
   }, [selectedCommunity]);
 
   // Function to handle file selection and save to local storage
@@ -44,7 +46,7 @@ const MintNft = () => {
       const reader = new FileReader();
       reader.onloadend = () => {
         setSelectedImage(reader.result);
-        localStorage.setItem(`${selectedCommunity}_uploadedImage`, reader.result);
+        localStorage.setItem(`${selectedCommunity}_temp_uploadedImage`, reader.result);
       };
       reader.readAsDataURL(file);
     }
@@ -53,7 +55,42 @@ const MintNft = () => {
   // Function to handle text input changes and save to local storage
   const handleInputChange = (event, setFunction, key) => {
     setFunction(event.target.value);
-    localStorage.setItem(`${selectedCommunity}_${key}`, event.target.value);
+    localStorage.setItem(`${selectedCommunity}_temp_${key}`, event.target.value);
+  };
+
+  // Function to show the modal if all fields are filled
+  const handleMintNft = () => {
+    if (nftName && nftDescription && selectedImage) {
+      // Save the data to persistent storage for Community.jsx
+      const communityData = {
+        nftName,
+        nftDescription,
+        nftDescription1,
+        selectedImage,
+      };
+      localStorage.setItem(`${selectedCommunity}_data`, JSON.stringify(communityData));
+
+      // Clear the temporary data after minting
+      setIsModalVisible(true);
+      setErrorMessage('');
+
+      setNftName('');
+      setNftDescription('');
+      setNftDescription1('');
+      setSelectedImage(null);
+
+      localStorage.removeItem(`${selectedCommunity}_temp_nftName`);
+      localStorage.removeItem(`${selectedCommunity}_temp_nftDescription`);
+      localStorage.removeItem(`${selectedCommunity}_temp_nftDescription1`);
+      localStorage.removeItem(`${selectedCommunity}_temp_uploadedImage`);
+    } else {
+      setErrorMessage('Please fill in all required fields before minting the NFT.');
+    }
+  };
+
+  // Function to close the modal
+  const closeModal = () => {
+    setIsModalVisible(false);
   };
 
   return (
@@ -155,13 +192,41 @@ const MintNft = () => {
               <motion.button
                 className='w-full bg-cyan-600 hover:bg-cyan-700 text-white py-2 rounded-xl'
                 variants={bounceOnHover}
+                onClick={handleMintNft}
               >
                 Mint NFT
               </motion.button>
+              {errorMessage && (
+                <p className="text-red-500 text-center mt-4">{errorMessage}</p>
+              )}
             </motion.div>
           </motion.div>
         </motion.div>
       </div>
+
+      {isModalVisible && (
+        <motion.div
+          className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <motion.div
+            className="bg-white rounded-lg p-6 max-w-md mx-auto text-center"
+            initial={{ scale: 0.8 }}
+            animate={{ scale: 1 }}
+          >
+            <h2 className="text-2xl font-bold mb-4">NFT Minted Successfully!</h2>
+            <p>Your NFT has been successfully minted and added to your collection.</p>
+            <button
+              className="mt-6 bg-cyan-600 hover:bg-cyan-700 text-white py-2 px-4 rounded-lg"
+              onClick={closeModal}
+            >
+              Close
+            </button>
+          </motion.div>
+        </motion.div>
+      )}
     </div>
   );
 };
