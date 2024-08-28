@@ -63,11 +63,15 @@ const Home = () => {
             className='flex justify-center'
             variants={fadeInUp}
           >
-            <div>
-              <p className='text-white lg:text-xl flex justify-center sm:text-xl md:text-2xl bg-black border-2 border-cyan-500 w-fit p-2 text-center rounded-xl'>
-                Upload, Mint, and Connect 🚀
-              </p>
-            </div>
+            <div class="relative flex items-center justify-center px-4 py-2 bg-black text-white text-xl font-semibold rounded-lg overflow-hidden">
+  <div class="absolute inset-0 rounded-lg border-2 border-transparent bg-gradient-to-tr "></div>
+  <div class="relative  flex items-center">
+    <span>Upload, Mint, and Connect</span>
+    <span class="ml-2">🚀</span>
+  </div>
+</div>
+
+
           </motion.div>
           <motion.p
             className='text-white flex justify-center md:pb-4 md:pt-10 pt-10 text-2xl md:text-5xl text-center font-bold leading-tight'
