@@ -64,7 +64,7 @@ const Home = () => {
             variants={fadeInUp}
           >
             <div class="relative flex items-center justify-center px-4 py-2 bg-black text-white text-xl font-semibold rounded-lg overflow-hidden">
-  <div class="absolute inset-0 rounded-lg border-2 border-transparent bg-gradient-to-tr "></div>
+  <div class="absolute inset-0 rounded-lg  border-transparent  bg-gradient-to-tr "></div>
   <div class="relative  flex items-center">
     <span>Upload, Mint, and Connect</span>
     <span class="ml-2">🚀</span>

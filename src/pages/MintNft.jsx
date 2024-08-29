@@ -2,24 +2,67 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 // Framer Motion Variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.8, ease: 'easeOut' } 
+  },
+};
+
+const rotateIn = {
+  hidden: { opacity: 0, rotate: -10, scale: 0.8 },
+  visible: { 
+    opacity: 1, 
+    rotate: 0, 
+    scale: 1,
+    transition: { duration: 0.8, ease: 'easeOut' } 
+  },
+};
+
 const scaleUp = {
   hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: 'easeOut' } },
-};
-
-const rotateFadeIn = {
-  hidden: { opacity: 0, rotate: -15 },
-  visible: { opacity: 1, rotate: 0, transition: { duration: 0.6, ease: 'easeOut' } },
-};
-
-const bounceOnHover = {
-  whileHover: { scale: 1.1, transition: { type: 'spring', stiffness: 300 } },
-  whileTap: { scale: 0.9 },
+  visible: { 
+    opacity: 1, 
+    scale: 1,
+    transition: { duration: 0.6, ease: 'easeOut' } 
+  },
 };
 
 const popUp = {
   hidden: { opacity: 0, scale: 0.5 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: 'easeOut' } },
+  visible: { 
+    opacity: 1, 
+    scale: 1,
+    transition: { duration: 0.6, ease: 'easeOut' } 
+  },
+};
+
+const modalVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { 
+    opacity: 1, 
+    scale: 1,
+    transition: { duration: 0.6, ease: 'easeOut' } 
+  },
+  exit: { opacity: 0, scale: 0.8, transition: { duration: 0.3 } },
+};
+
+const buttonHover = {
+  hover: { scale: 1.05, boxShadow: '0px 0px 8px rgb(255, 255, 255)' },
+  tap: { scale: 0.95 },
 };
 
 const MintNft = () => {
@@ -100,18 +143,19 @@ const MintNft = () => {
           className='flex items-center mx-32 gap-16'
           initial="hidden"
           animate="visible"
+          variants={containerVariants}
         >
-          <motion.div className='w-full' variants={scaleUp}>
+          <motion.div className='w-full' variants={itemVariants}>
             <motion.div
               className='backdrop-blur-md bg-white/10 rounded-lg p-4'
-              variants={rotateFadeIn}
+              variants={rotateIn}
             >
               <div className='mb-4'>
                 <motion.select
                   value={selectedCommunity}
                   onChange={(e) => setSelectedCommunity(e.target.value)}
                   className='w-full rounded-xl bg-slate-500 p-2 text-white'
-                  variants={scaleUp}
+                  variants={itemVariants}
                 >
                   <option value="Community1">Community 1</option>
                   <option value="Community2">Community 2</option>
@@ -126,7 +170,7 @@ const MintNft = () => {
                   onChange={(e) => handleInputChange(e, setNftName, 'nftName')}
                   className='w-full rounded-xl bg-slate-500 p-2 text-white'
                   placeholder="Enter NFT Name"
-                  variants={scaleUp}
+                  variants={itemVariants}
                 />
               </div>
               <div className='mb-4'>
@@ -136,13 +180,13 @@ const MintNft = () => {
                   onChange={(e) => handleInputChange(e, setNftDescription, 'nftDescription')}
                   className='w-full rounded-xl bg-slate-500 p-2 text-white'
                   placeholder="Enter NFT Description"
-                  variants={scaleUp}
+                  variants={itemVariants}
                 />
               </div>
             </motion.div>
             <motion.div
               className='backdrop-blur-md bg-white/10 rounded-lg mt-10 p-3'
-              variants={rotateFadeIn}
+              variants={rotateIn}
             >
               <motion.textarea
                 type="text"
@@ -150,12 +194,12 @@ const MintNft = () => {
                 onChange={(e) => handleInputChange(e, setNftDescription1, 'nftDescription1')}
                 className='w-full rounded-xl bg-slate-500 p-2 min-h-40 mt-2 text-white'
                 placeholder="Enter Additional NFT Description"
-                variants={scaleUp}
+                variants={itemVariants}
               />
             </motion.div>
           </motion.div>
 
-          <motion.div className='w-full' variants={rotateFadeIn}>
+          <motion.div className='w-full' variants={rotateIn}>
             <motion.div
               className='backdrop-blur-md bg-white/10 min-h-[300px] h-full rounded-lg p-4'
               variants={scaleUp}
@@ -166,7 +210,7 @@ const MintNft = () => {
                 accept="image/*"
                 onChange={handleImageChange}
                 className='w-full text-white'
-                variants={scaleUp}
+                variants={itemVariants}
               />
               {selectedImage && (
                 <motion.div
@@ -187,11 +231,12 @@ const MintNft = () => {
 
             <motion.div
               className='mt-8'
-              variants={bounceOnHover}
+              variants={buttonHover}
+              whileHover="hover"
+              whileTap="tap"
             >
               <motion.button
                 className='w-full bg-cyan-600 hover:bg-cyan-700 text-white py-2 rounded-xl'
-                variants={bounceOnHover}
                 onClick={handleMintNft}
               >
                 Mint NFT
@@ -207,9 +252,10 @@ const MintNft = () => {
       {isModalVisible && (
         <motion.div
           className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          variants={modalVariants}
         >
           <motion.div
             className="bg-white rounded-lg p-6 max-w-md mx-auto text-center"
