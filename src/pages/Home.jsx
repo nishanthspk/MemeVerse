@@ -13,8 +13,8 @@ import Telegram from "../assets/Telegram App.png";
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: {
-    opacity: 1, 
-    y: 0, 
+    opacity: 1,
+    y: 0,
     transition: { duration: 0.6, ease: 'easeOut' }
   },
 };
@@ -64,12 +64,12 @@ const Home = () => {
             variants={fadeInUp}
           >
             <div class="relative flex items-center justify-center px-4 py-2 bg-black text-white text-xl font-semibold rounded-lg overflow-hidden">
-  <div class="absolute inset-0 rounded-lg  border-transparent  bg-gradient-to-tr "></div>
-  <div class="relative  flex items-center">
-    <span>Upload, Mint, and Connect</span>
-    <span class="ml-2">🚀</span>
-  </div>
-</div>
+              <div class="absolute inset-0 rounded-lg  border-transparent  bg-gradient-to-tr "></div>
+              <div class="relative  flex items-center">
+                <span>Upload, Mint, and Connect</span>
+                <span class="ml-2">🚀</span>
+              </div>
+            </div>
 
 
           </motion.div>
@@ -183,7 +183,7 @@ const Home = () => {
         className='bg-gradient-to-b from-black via-black to-cyan-500 min-h-screen rounded-2xl mx-4'
         variants={fadeInUp}
       >
-        <div className='text-white pt-32'>
+        <div className='text-white pt-32 '>
           <motion.p
             className='flex justify-center text-5xl text-center font-bold leading-tight'
             variants={fadeInUp}
@@ -222,6 +222,9 @@ const Home = () => {
             <motion.img className='pr-2 h-6 cursor-pointer hover:opacity-75' src={Telegram} alt="Telegram" variants={scaleOnHover} />
             <motion.img className='pr-2 h-6 cursor-pointer hover:opacity-75' src={Twitter} alt="Twitter" variants={scaleOnHover} />
             <motion.img className='pr-2 h-6 cursor-pointer hover:opacity-75' src={LinkedIn} alt="LinkedIn" variants={scaleOnHover} />
+          </div>
+          <div className='flex justify-center pt-5 text-white text-xs md:text-xl '>
+            <motion.p>Copyright ©️ 2024 Coding Artist | All Rights Reserved</motion.p>
           </div>
         </motion.div>
       </motion.div>
