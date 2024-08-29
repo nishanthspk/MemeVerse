@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className='h-10 w-8 '>
         <img src={Logo} className='backdrop-blur-md   '></img>
         </div>
-        <a className='text-white text-2xl pt-1 '>OnchainMemes</a>
+        <a className='text-white text-2xl pt-1 '>MemeVerse</a>
       </div>
       <div className='text-white space-x-14 hidden md:flex pt-2'>
       <Link to="/home">Home</Link>
