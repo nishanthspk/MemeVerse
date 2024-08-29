@@ -214,7 +214,7 @@ const Home = () => {
             <div className='h-10 w-8'>
               <img src={Logo} alt="OnchainMemes Logo" />
             </div>
-            <a className='text-white text-2xl'>OnchainMemes</a>
+            <a className='text-white text-2xl'>MemeVerse</a>
           </div>
           <div className='flex pt-5 justify-center'>
             <motion.img className='pr-2 h-6 cursor-pointer hover:opacity-75' src={Facebook} alt="Facebook" variants={scaleOnHover} />
