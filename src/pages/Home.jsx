@@ -143,7 +143,7 @@ const Home = () => {
           className='text-white  md:flex justify-between pt-24 mx-2'
           variants={fadeInUp}
         >
-        <div className="flex justify-between">
+        <div className="flex justify-between md:block mx-5">
           <div className='w-1/3 text-center'>
             <p className='text-8xl text-cyan-300 font-bold'>1</p>
             <p className='md:pt-4 pt-10 text-2xl font-semibold'>Create Your Meme</p>
@@ -159,6 +159,7 @@ const Home = () => {
             </p>
           </div>
           </div>
+          <div className='pt-10 flex justify-center md:block '>
           <div className='w-1/3 text-center'>
             <p className='text-8xl text-cyan-300 font-bold'>3</p>
             <p className='md:pt-4 pt-10 text-2xl font-semibold'>Trade and Enjoy</p>
@@ -166,10 +167,11 @@ const Home = () => {
               Connect with a global community of meme enthusiasts, trade your NFTs, and enjoy the benefits of digital ownership.
             </p>
           </div>
+          </div>
         </motion.div>
 
         <motion.div
-          className='flex justify-center pt-24'
+          className='flex justify-center pt-20 md:pt-24'
           variants={fadeInUp}
         >
           <motion.a
