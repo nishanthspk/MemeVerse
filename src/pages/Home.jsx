@@ -74,23 +74,23 @@ const Home = () => {
 
           </motion.div>
           <motion.p
-            className='text-white flex justify-center md:pb-4 md:pt-10 pt-10 text-2xl md:text-5xl text-center font-bold leading-tight'
+            className='text-white flex justify-center md:pb-4 md:pt-10 pt-10 text-5xl lg:text-2xl md:text-5xl text-center font-bold leading-tight'
             variants={fadeInUp}
           >
             Your Memes, Your NFT: Join<br /> the Digital Art Revolution
           </motion.p>
           <motion.p
-            className='text-white flex justify-center text-sm sm:text-xl md:text-3xl md:pt-10 pt-10 lg:pt-5 lg:mx-16 md:text-center lg:text-center text-center leading-relaxed'
+            className='text-white flex justify-center text-2xl lg:text-xl md:text-3xl md:pt-10 pt-10 lg:pt-5 lg:mx-16 md:text-center lg:text-center text-center leading-relaxed'
             variants={fadeInUp}
           >
             Own and trade your favorite memes as NFTs. Create, mint, and share with a global community of meme enthusiasts. Join the meme revolution now!
           </motion.p>
           <motion.div
-            className='flex justify-center md:pt-20 lg:pt-8 pt-5'
+            className='flex justify-center md:pt-20 lg:pt-8 pt-14 pb-14'
             variants={fadeInUp}
           >
             <motion.a
-              className='bg-white rounded-2xl p-3 text-black hover:bg-cyan-500 transition-all text-lg font-medium'
+              className='bg-white rounded-2xl  p-3 text-black hover:bg-cyan-500 transition-all text-lg font-medium'
               variants={scaleOnHover}
             >
               Get Started
@@ -223,7 +223,7 @@ const Home = () => {
             <motion.img className='pr-2 h-6 cursor-pointer hover:opacity-75' src={Twitter} alt="Twitter" variants={scaleOnHover} />
             <motion.img className='pr-2 h-6 cursor-pointer hover:opacity-75' src={LinkedIn} alt="LinkedIn" variants={scaleOnHover} />
           </div>
-          <div className='flex justify-center pt-5 text-white text-xs md:text-xl '>
+          <div className='flex justify-center pt-5 text-white text-xs md:text-xs '>
             <motion.p>Copyright ©️ 2024 Coding Artist | All Rights Reserved</motion.p>
           </div>
         </motion.div>
