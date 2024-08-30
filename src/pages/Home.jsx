@@ -112,7 +112,7 @@ const Home = () => {
         className='bg-black p-10'
         variants={fadeInUp}
       >
-        <div className='text-white grid grid-cols-2  md:pt-4 lg:pt-6 md:pb-3 lg:pb-6 md:mx-5 space-x-10 items-center'>
+        <div className='text-white md:grid md:grid-cols-2  md:pt-4 lg:pt-6 md:pb-3 lg:pb-6 md:mx-5 md:space-x-10 items-center text-center'>
           <p className='text-3xl md:text-4xl font-semibold leading-snug'>
             Want to earn rewards while uploading your favorite memes?
           </p>
@@ -140,38 +140,38 @@ const Home = () => {
         </motion.div>
 
         <motion.div
-          className='text-white  md:flex justify-between pt-24 mx-2'
+          className='text-white md:flex justify-between gap-10 pt-24 mx-2'
           variants={fadeInUp}
         >
-        <div className="flex justify-between md:block mx-5">
-          <div className='w-1/3 text-center'>
-            <p className='text-8xl text-cyan-300 font-bold'>1</p>
-            <p className='md:pt-4 pt-10 text-2xl font-semibold'>Create Your Meme</p>
-            <p className='pt-4 leading-relaxed hidden md:flex justify-center'>
-              Design your next viral meme with our intuitive creation tool, where every idea can become a masterpiece.
-            </p>
+          <div className=' flex gap-10'>
+            <div className=' text-center'>
+              <p className='text-8xl text-cyan-300 font-bold'>1</p>
+              <p className='md:pt-4 pt-10 text-2xl font-semibold'>Create Your Meme</p>
+              <p className='pt-4 leading-relaxed hidden md:flex justify-center'>
+                Design your next viral meme with our intuitive creation tool, where every idea can become a masterpiece.
+              </p>
+            </div>
+            <div className=' text-center'>
+              <p className='text-8xl text-cyan-300 font-bold'>2</p>
+              <p className='md:pt-4 pt-10 text-2xl font-semibold'>Mint Your Meme</p>
+              <p className='pt-4 leading-relaxed hidden md:flex justify-center'>
+                Transform your meme into a unique, collectible NFT with just a few clicks, ensuring authenticity and ownership.
+              </p>
+            </div>
           </div>
-          <div className='w-1/3 text-center'>
-            <p className='text-8xl text-cyan-300 font-bold'>2</p>
-            <p className='md:pt-4 pt-10 text-2xl font-semibold'>Mint Your Meme</p>
-            <p className='pt-4 leading-relaxed hidden md:flex justify-center'>
-              Transform your meme into a unique, collectible NFT with just a few clicks, ensuring authenticity and ownership.
-            </p>
-          </div>
-          </div>
-          <div className='pt-10 flex justify-center md:block '>
-          <div className='w-1/3 text-center'>
-            <p className='text-8xl text-cyan-300 font-bold'>3</p>
-            <p className='md:pt-4 pt-10 text-2xl font-semibold'>Trade and Enjoy</p>
-            <p className=' leading-relaxed hidden md:flex justify-center'>
-              Connect with a global community of meme enthusiasts, trade your NFTs, and enjoy the benefits of digital ownership.
-            </p>
-          </div>
+          <div>
+            <div className=' text-center'>
+              <p className='text-8xl text-cyan-300 font-bold'>3</p>
+              <p className='md:pt-4 pt-10 text-2xl font-semibold'>Trade and Enjoy</p>
+              <p className=' leading-relaxed hidden md:flex justify-center'>
+                Connect with a global community of meme enthusiasts, trade your NFTs, and enjoy the benefits of digital ownership.
+              </p>
+            </div>
           </div>
         </motion.div>
 
         <motion.div
-          className='flex justify-center pt-20 md:pt-24'
+          className='flex justify-center pt-6 md:pt-24'
           variants={fadeInUp}
         >
           <motion.a
@@ -227,7 +227,7 @@ const Home = () => {
             <motion.img className='pr-2 h-6 cursor-pointer hover:opacity-75' src={Twitter} alt="Twitter" variants={scaleOnHover} />
             <motion.img className='pr-2 h-6 cursor-pointer hover:opacity-75' src={LinkedIn} alt="LinkedIn" variants={scaleOnHover} />
           </div>
-          <div className='flex justify-center pt-5 text-white text-xs md:text-xs pb-5 '>
+          <div className='flex justify-center pt-5 text-white text-xs md:text-xs '>
             <motion.p>Copyright ©️ 2024 Coding Artist | All Rights Reserved</motion.p>
           </div>
         </motion.div>
