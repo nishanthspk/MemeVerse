@@ -140,9 +140,10 @@ const Home = () => {
         </motion.div>
 
         <motion.div
-          className='text-white flex justify-between pt-24 mx-2'
+          className='text-white  md:flex justify-between pt-24 mx-2'
           variants={fadeInUp}
         >
+        <div className="flex justify-between">
           <div className='w-1/3 text-center'>
             <p className='text-8xl text-cyan-300 font-bold'>1</p>
             <p className='md:pt-4 pt-10 text-2xl font-semibold'>Create Your Meme</p>
@@ -156,6 +157,7 @@ const Home = () => {
             <p className='pt-4 leading-relaxed hidden md:flex justify-center'>
               Transform your meme into a unique, collectible NFT with just a few clicks, ensuring authenticity and ownership.
             </p>
+          </div>
           </div>
           <div className='w-1/3 text-center'>
             <p className='text-8xl text-cyan-300 font-bold'>3</p>
