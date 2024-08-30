@@ -74,7 +74,7 @@ const Home = () => {
 
           </motion.div>
           <motion.p
-            className='text-white flex justify-center md:pb-4 md:pt-10 pt-10 text-5xl lg:text-2xl md:text-5xl text-center font-bold leading-tight'
+            className='text-white flex justify-center md:pb-4 md:pt-10 pt-10 text-5xl lg:text-5xl md:text-5xl text-center font-bold leading-tight'
             variants={fadeInUp}
           >
             Your Memes, Your NFT: Join<br /> the Digital Art Revolution
@@ -112,11 +112,11 @@ const Home = () => {
         className='bg-black p-10'
         variants={fadeInUp}
       >
-        <div className='text-white grid grid-cols-2 md:pt-4 lg:pt-6 md:pb-3 lg:pb-6 md:mx-5 space-x-10 items-center'>
-          <p className='text-4xl font-semibold leading-snug'>
+        <div className='text-white grid grid-cols-2  md:pt-4 lg:pt-6 md:pb-3 lg:pb-6 md:mx-5 space-x-10 items-center'>
+          <p className='text-3xl md:text-4xl font-semibold leading-snug'>
             Want to earn rewards while uploading your favorite memes?
           </p>
-          <p className='text-base leading-relaxed'>
+          <p className='text-base  leading-relaxed'>
             At Meme3, we empower you to create, mint, and trade meme NFTs. Our platform offers an intuitive meme creation tool, a secure NFT minting process, and a vibrant marketplace for buying and selling. Join our global community of meme enthusiasts and turn your favorite memes into valuable digital assets.
           </p>
         </div>
@@ -129,12 +129,12 @@ const Home = () => {
         animate="visible"
       >
         <motion.div
-          className='text-white md:pt-40 lg:pt-6'
+          className='text-white md:pt-40 lg:pt-6 pt-10'
           variants={fadeInUp}
         >
-          <p className='flex justify-center md:text-3xl lg:text-xl uppercase font-medium'>How Meme3 Works</p>
-          <p className='flex justify-center text-5xl md:pt-4 lg:pt-2 leading-tight'>Create, Mint, Trade, Enjoy</p>
-          <p className='flex justify-center pt-2 text-center mx-4 text-lg leading-relaxed'>
+          <p className='flex justify-center md:text-3xl lg:text-xl text-xl  uppercase font-medium '>How Meme3 Works</p>
+          <p className='flex justify-center text-4xl text-center pt-10 md:pt-4 lg:pt-2 leading-tight'>Create, Mint, Trade, Enjoy</p>
+          <p className='flex justify-center pt-14 md:pt-2 text-center mx-4 text-lg leading-relaxed'>
             Explore and discover how you can engage with memes, convert them into NFTs, and participate in the global marketplace to unlock rewards and opportunities.
           </p>
         </motion.div>
@@ -146,7 +146,7 @@ const Home = () => {
           <div className='w-1/3 text-center'>
             <p className='text-8xl text-cyan-300 font-bold'>1</p>
             <p className='pt-4 text-2xl font-semibold'>Create Your Meme</p>
-            <p className='pt-4 leading-relaxed'>
+            <p className='pt-4 leading-relaxed hidden md:flex justify-center'>
               Design your next viral meme with our intuitive creation tool, where every idea can become a masterpiece.
             </p>
           </div>
