@@ -145,7 +145,7 @@ const Home = () => {
         >
           <div className='w-1/3 text-center'>
             <p className='text-8xl text-cyan-300 font-bold'>1</p>
-            <p className='md:pt-4  text-2xl font-semibold'>Create Your Meme</p>
+            <p className='md:pt-4 pt-10 text-2xl font-semibold'>Create Your Meme</p>
             <p className='pt-4 leading-relaxed hidden md:flex justify-center'>
               Design your next viral meme with our intuitive creation tool, where every idea can become a masterpiece.
             </p>
