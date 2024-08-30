@@ -159,7 +159,7 @@ const Home = () => {
           </div>
           <div className='w-1/3 text-center'>
             <p className='text-8xl text-cyan-300 font-bold'>3</p>
-            <p className='pt-4 text-2xl font-semibold'>Trade and Enjoy</p>
+            <p className='md:pt-4  text-2xl font-semibold'>Trade and Enjoy</p>
             <p className='pt-4 leading-relaxed hidden md:flex justify-center'>
               Connect with a global community of meme enthusiasts, trade your NFTs, and enjoy the benefits of digital ownership.
             </p>
