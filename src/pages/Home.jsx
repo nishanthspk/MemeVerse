@@ -152,7 +152,7 @@ const Home = () => {
           </div>
           <div className='w-1/3 text-center'>
             <p className='text-8xl text-cyan-300 font-bold'>2</p>
-            <p className='pt-4 text-2xl font-semibold'>Mint Your Meme</p>
+            <p className='md:pt-4 text-2xl font-semibold'>Mint Your Meme</p>
             <p className='pt-4 leading-relaxed hidden md:flex justify-center'>
               Transform your meme into a unique, collectible NFT with just a few clicks, ensuring authenticity and ownership.
             </p>
