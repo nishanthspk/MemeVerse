@@ -23,24 +23,27 @@ const MobileMenu = ({ isOpen, onClose }) => {
         </button>
       </div>
       <nav className="flex flex-col items-center mt-8 space-y-4">
-        <a href="/" className="text-black text-xl" onClick={onClose}>
-          Home
-        </a>
-        <a href="/about" className="text-black text-xl" onClick={onClose}>
-          About
-        </a>
-        <button onClick={handleServiceClick} className="text-black text-xl">
-          Service
-        </button>
-        <a href="/display" className="text-black text-xl" onClick={onClose}>
-          Blogs
-        </a>
+        
        <a href='/contact'>
         <button
           className="text-amber-500 px-2 py-1 bg-stone-800 rounded-sm text-xl"
           onClick={onClose}
         >
-          Contact Us
+          Home
+        </button></a>
+        <a href='/contact'>
+        <button
+          className="text-amber-500 px-2 py-1 bg-stone-800 rounded-sm text-xl"
+          onClick={onClose}
+        >
+          MintNft
+        </button></a>
+        <a href='/contact'>
+        <button
+          className="text-amber-500 px-2 py-1 bg-stone-800 rounded-sm text-xl"
+          onClick={onClose}
+        >
+          Community
         </button></a>
       </nav>
     </div>
