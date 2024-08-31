@@ -112,7 +112,7 @@ const Home = () => {
         className='bg-black p-10'
         variants={fadeInUp}
       >
-        <div className='text-white md:grid md:grid-cols-2  md:pt-4 lg:pt-6 md:pb-3 lg:pb-6 md:mx-5 md:space-x-10 items-center text-center'>
+        <div className='text-white md:grid md:grid-cols-2  md:pt-4 lg:pt-6 md:pb-3 lg:pb-6 md:mx-5 md:space-x-10 items-center '>
           <p className='text-3xl md:text-4xl font-semibold leading-snug'>
             Want to earn rewards while uploading your favorite memes?
           </p>
