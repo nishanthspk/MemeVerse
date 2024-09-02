@@ -140,7 +140,7 @@ const MintNft = () => {
     <div className='font-poppins bg-black'>
       <div className='bg-gradient-to-b from-black via-black to-cyan-500 h-full mx-4 md:min-h-screen pt-24'>
         <motion.div
-          className='flex items-center mx-32 gap-16'
+          className='flex flex-col md:flex-row items-center md:mx-32 gap-8 md:gap-16'
           initial="hidden"
           animate="visible"
           variants={containerVariants}
@@ -236,7 +236,7 @@ const MintNft = () => {
               whileTap="tap"
             >
               <motion.button
-                className='w-full bg-cyan-600 hover:bg-cyan-700 text-white py-2 rounded-xl'
+                className='w-full bg-cyan-600 hover:bg-black text-white py-2 rounded-xl'
                 onClick={handleMintNft}
               >
                 Mint NFT
