@@ -227,7 +227,7 @@ const Home = () => {
             <motion.img className='pr-2 h-6 cursor-pointer hover:opacity-75' src={Twitter} alt="Twitter" variants={scaleOnHover} />
             <motion.img className='pr-2 h-6 cursor-pointer hover:opacity-75' src={LinkedIn} alt="LinkedIn" variants={scaleOnHover} />
           </div>
-          <div className='flex justify-center pt-5 text-white text-xs md:text-xs '>
+          <div className='flex justify-center pt-5 text-white text-xs md:text-xs mb-2 pb-4'>
             <motion.p>Copyright ©️ 2024 Coding Artist | All Rights Reserved</motion.p>
           </div>
         </motion.div>

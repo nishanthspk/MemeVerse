@@ -199,9 +199,9 @@ const MintNft = () => {
             </motion.div>
           </motion.div>
 
-          <motion.div className='w-full' variants={rotateIn}>
+          <motion.div className='w-full pb-2 ' variants={rotateIn}>
             <motion.div
-              className='backdrop-blur-md bg-white/10 min-h-[300px] h-full rounded-lg p-4'
+              className='backdrop-blur-md bg-white/10 min-h-[300px] h-full  rounded-lg p-4 '
               variants={scaleUp}
             >
               <label className='block text-white mb-2'>Upload NFT Image:</label>
@@ -236,7 +236,7 @@ const MintNft = () => {
               whileTap="tap"
             >
               <motion.button
-                className='w-full bg-cyan-600 hover:bg-black text-white py-2 rounded-xl'
+                className='w-full bg-cyan-600 md:hover:bg-black lg:hover:bg-black hover:bg-black pt-5 text-white py-2  rounded-xl'
                 onClick={handleMintNft}
               >
                 Mint NFT
