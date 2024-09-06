@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import MintNft from './pages/MintNft';
 import Community from './pages/Community';
-import ContactUs from './pages/ContactUs';
+
 import Navbar from '../src/Components/Navbar';  // Import Navbar
 
 const App = () => {
