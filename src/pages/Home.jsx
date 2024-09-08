@@ -170,17 +170,7 @@ const Home = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          className='flex justify-center pt-6 md:pt-24'
-          variants={fadeInUp}
-        >
-          <motion.a
-            className='bg-white rounded-2xl p-2 text-black hover:bg-cyan-500 transition-all text-lg font-medium'
-            variants={scaleOnHover}
-          >
-            Get Started
-          </motion.a>
-        </motion.div>
+       
       </motion.div>
 
       <motion.div
