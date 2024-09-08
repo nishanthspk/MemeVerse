@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import Illustration from '../assets/Illustration.png';
 import Illustration1 from '../assets/Illustration2.png';
 import Logo from "../assets/logo1.png";
@@ -8,6 +9,7 @@ import Instagram from "../assets/Instagram.png";
 import LinkedIn from "../assets/LinkedIn.png";
 import Twitter from "../assets/TwitterX.png";
 import Telegram from "../assets/Telegram App.png";
+import MintNft from './MintNft';
 
 // Framer Motion Variants
 const fadeInUp = {
@@ -47,10 +49,20 @@ const slideInFromRight = {
 const scaleOnHover = {
   whileHover: { scale: 1.1, transition: { duration: 0.3 } },
   whileTap: { scale: 0.95 },
+  
 };
 
 
+
 const Home = () => {
+
+ 
+    const navigate = useNavigate(); // Hook to handle navigation
+  
+    // Handler function for button click
+    const handleClick = () => {
+      navigate('/MintNft'); // Replace with your target route
+    };
   return (
     <div className='font-poppins bg-black overflow-hidden'>
       <motion.div
@@ -93,6 +105,9 @@ const Home = () => {
             <motion.a
               className='bg-white rounded-2xl  p-3 text-black hover:bg-cyan-500 transition-all text-lg font-medium'
               variants={scaleOnHover}
+              initial="initial"
+              whileHover="hover"
+              onClick={handleClick}
             >
               Get Started
             </motion.a>
