@@ -213,6 +213,9 @@ const Home = () => {
             <motion.a
               className='bg-white rounded-2xl text-black p-2 hover:bg-cyan-500 transition-all text-lg font-medium'
               variants={scaleOnHover}
+              initial="initial"
+              whileHover="hover"
+              onClick={handleClick}
             >
               Get Started
             </motion.a>
