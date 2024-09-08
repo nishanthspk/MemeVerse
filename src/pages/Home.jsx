@@ -49,6 +49,7 @@ const scaleOnHover = {
   whileTap: { scale: 0.95 },
 };
 
+
 const Home = () => {
   return (
     <div className='font-poppins bg-black overflow-hidden'>
